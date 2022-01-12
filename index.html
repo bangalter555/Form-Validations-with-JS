@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validations</title>
+  </head>
+  <body class="body">
+    <h2 class="form-title">Log In</h2>
+    <form name="form" class="form-contact">
+      <input
+        type="text"
+        class="input"
+        name="name"
+        placeholder="Write your name"
+        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+        required
+      />
+      <span id="name" class="form-contact-error none"
+        >This input admits letters and spaces only</span
+      >
+      <input
+        type="email"
+        class="input"
+        name="email"
+        placeholder="Write your email"
+        pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+        required
+      />
+      <span id="email" class="form-contact-error none"
+        >This input must contain an @ and have a valid adress</span
+      >
+      <input
+        type="password"
+        class="input"
+        name="password"
+        placeholder="Write your password"
+        pattern="^.{8,25}$"
+        required
+      />
+      <span id="password" class="form-contact-error none"
+        >Password must be 8 to 25 characters long</span
+      >
+      <textarea
+        name="suggestions"
+        class="suggestions"
+        cols="50"
+        rows="10"
+        data-pattern="^.{1,255}$"
+        placeholder="Any suggestions?"
+        spellcheck="true"
+        required
+      ></textarea>
+      <span id="text-area" class="form-contact-error none"
+        >Your message should not contain more than 255 characters</span
+      >
+      <input id="submit" type="submit" value="Send" name="send" />
+    </form>
+    <div class="form-response none">
+      <p>Your information has been sent</p>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

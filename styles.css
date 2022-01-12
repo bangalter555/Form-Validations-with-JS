@@ -1,0 +1,71 @@
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  transition: 200ms ease;
+}
+
+.body {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-contact {
+  width: 50%;
+  height: 30rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-contact textarea {
+  resize: none;
+}
+
+.input {
+  width: 25rem;
+  padding: 1% 0;
+}
+.input:invalid {
+  border: red thin solid;
+}
+.input:valid {
+  border: green thin solid;
+}
+
+.form-contact-error {
+  margin-top: -2.2rem;
+  width: 20rem;
+  padding: 0 6%;
+  font-size: 1rem;
+  text-align: center;
+  background-color: rgb(255, 000, 100);
+  color: #fff;
+  transition: 800ms ease;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
