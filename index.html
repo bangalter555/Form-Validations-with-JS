@@ -9,7 +9,12 @@
   </head>
   <body class="body">
     <h2 class="form-title">Log In</h2>
-    <form name="form" class="form-contact">
+    <form
+      action="https://formsubmit.co/estebamlo1975@gmail.com"
+      method="POST"
+      name="form"
+      class="form-contact"
+    >
       <input
         type="text"
         class="input"
@@ -25,12 +30,13 @@
         type="email"
         class="input"
         name="email"
-        placeholder="Write your email"
+        placeholder="Write your email. e.g: name123@address.com"
         pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
         required
       />
       <span id="email" class="form-contact-error none"
-        >This input must contain an @ and have a valid adress</span
+        >This input must not contain any capital letters and must have a valid
+        adress</span
       >
       <input
         type="password"
@@ -51,7 +57,6 @@
         data-pattern="^.{1,255}$"
         placeholder="Any suggestions?"
         spellcheck="true"
-        required
       ></textarea>
       <span id="text-area" class="form-contact-error none"
         >Your message should not contain more than 255 characters</span

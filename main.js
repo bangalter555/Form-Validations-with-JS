@@ -25,9 +25,12 @@ const formValidator = () => {
 
 const formChecked = () => {
   d.addEventListener("submit", (e) => {
-    if (e.target.matches("#submit")) {
+    // e.preventDefault();
+
+    setTimeout(() => {
+      alert("Your information has been sent");
       location.reload();
-    }
+    }, Math.random());
   });
 };
 
